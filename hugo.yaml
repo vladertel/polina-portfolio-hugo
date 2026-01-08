@@ -1,0 +1,255 @@
+baseURL: "https://example.org/"  # Replace with your actual domain
+languageCode: "en-us"
+title: "Polina Ertel - Digital Marketing Portfolio"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 9
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Image processing configuration
+imaging:
+  resampleFilter: "Lanczos"  # High-quality resampling
+  quality: 85  # Balance between quality and file size (75-95 recommended)
+  anchor: "Smart"  # Smart cropping
+
+  # Background color for transparent images
+  bgColor: "#ffffff"
+
+  # EXIF data handling
+  exif:
+    disableDate: false
+    disableLatLong: true
+    includeFields: ""
+    excludeFields: ""
+
+# Taxonomies for filtering portfolio
+taxonomies:
+  category: categories
+  tag: tags
+  industry: industries
+  service: services
+
+params:
+  title: "Polina Ertel"
+  description: "Digital Marketing & Graphic Design Portfolio - Amsterdam-based specialist in social media, CRM/email, and cross-channel campaigns"
+  favicon: "/images/profile.jpg"
+
+  useBootstrapCDN: true
+
+  animate: true
+
+  theme:
+    disableThemeToggle: false
+    defaultTheme: "light"
+
+  # Color scheme with teal accents
+  color:
+    textColor: "#373530"
+    secondaryTextColor: "#6c757d"
+    textLinkColor: "#509c6e"  # Teal accent
+    backgroundColor: "#ffffff"
+    secondaryBackgroundColor: "#e8f5f0"  # Light teal
+    primaryColor: "#509c6e"  # Teal
+    secondaryColor: "#f8f9fa"
+
+    darkmode:
+      textColor: "#e4e6eb"
+      secondaryTextColor: "#b0b3b8"
+      textLinkColor: "#64d89f"
+      backgroundColor: "#18191a"
+      secondaryBackgroundColor: "#212529"
+      primaryColor: "#64d89f"
+      secondaryColor: "#212529"
+
+  # Navigation bar
+  navbar:
+    align: ms-auto
+    brandName: "Polina Ertel"
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero section
+  hero:
+    enable: true
+    intro: "Hi! I am"
+    title: "Polina Ertel"
+    subtitle: "Digital Marketing Specialist"
+    content: "Amsterdam-based digital marketing specialist combining data-driven marketing with creative visual culture. Building growth through social media, CRM/email, and cross-channel campaigns with clear results and strong content execution."
+    image: /images/profile.jpg
+    bottomImage:
+      enable: false
+    button:
+      enable: true
+      name: "View Case Studies"
+      url: "#projects"
+      download: false
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/polina-ertel-bb89b875/
+        - icon: fas fa-envelope
+          url: mailto:paulina.d.ertel@gmail.com
+
+  # About section
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/profile.jpg"
+    content: |-
+      I am a digital marketing specialist based in Amsterdam with a unique background that combines data-driven marketing and creative visual culture. I build growth both in-house and as a freelancer, specializing in social media marketing, CRM/email campaigns, and cross-channel campaign coordination.
+
+      Apart from marketing, I am a modern visual artist studying at Gerrit Rietveld Academie, which brings a unique creative perspective to all my marketing work.
+    skills:
+      enable: true
+      title: "Core Strengths"
+      items:
+        - "Social Media & Community Growth"
+        - "Meta/Instagram Ads Manager"
+        - "Influencer/UGC Collaboration"
+        - "Email/CRM (HubSpot/Salesforce/Mailchimp)"
+        - "AI Enthusiast"
+        - "Campaign Coordination & Optimization"
+        - "Visual Content Direction"
+        - "Public Relations/Press Tours"
+        - "Events Organisation"
+
+  # Experience section (will be populated with case studies)
+  experience:
+    enable: false
+
+  # Education
+  education:
+    enable: true
+    title: "Education & Certificates"
+    index: false
+    items:
+      - title: "Bachelor of Arts - Fine Arts DOGTime"
+        school:
+          name: "Gerrit Rietveld Academie"
+          url: "https://www.rietveldacademie.nl/"
+        date: "2024 - 2029"
+        content: |-
+          Part-time programme, currently completing the second year of the evening propaedeutic phase. Building broad artistic foundations through studio work, art theory, and media exploration.
+
+          - Expanded Painting & Unstable Media
+
+      - title: "International Journalism & Public Relations"
+        school:
+          name: "Moscow State Institute of International Relations (MGIMO)"
+          url: "https://english.mgimo.ru/"
+        date: "2013 - 2017"
+        content: |-
+          Focus on Oil and Gas Industry communications.
+
+          **Relevant skills:** Political Science, PR & GR, Business Journalism, Marketing and Communications, Model UN participation
+
+      - title: "Certificates"
+        school:
+          name: "Professional Certifications"
+        content: |-
+          - HubSpot Email Marketing Certified
+          - Google Analytics Certified
+          - IELTS: 7.5
+
+  # Achievements (Selected Results)
+  achievements:
+    enable: true
+    title: "Selected Results"
+    items:
+      - title: "+80K organic followers"
+        content: "From viral reach for Artistro USA"
+        url: "#"
+      - title: "+48% online orders"
+        content: "E-commerce growth for Artistro USA"
+      - title: "+28% repeat sales uplift"
+        content: "CRM optimization for Tremco CPG Europe"
+      - title: "+45% website traffic"
+        content: "Digital growth for Mitsubishi Electric"
+      - title: "30+ top-tier media publications"
+        content: "PR success for Mitsubishi Electric"
+      - title: "60+ new clients"
+        content: "After showroom launch for Artiteq Rotterdam"
+      - title: "+4,000 followers"
+        content: "Social growth for Ormco/My Ideal Smile"
+      - title: "90+ art workshops"
+        content: "Delivered through Polina Ertel Arts"
+
+  # Projects (Case Studies) - will be populated from content/projects/
+  projects:
+    enable: true
+    title: "Case Studies"
+    items: []  # Will be auto-populated from content files
+
+  # Contact
+  contact:
+    enable: true
+    title: "Contact"
+    content: "Let's create something amazing together! Reach out to discuss your marketing needs or project ideas."
+    btnName: "Email Me"
+    btnLink: "mailto:paulina.d.ertel@gmail.com"
+    formspree:
+      enable: false
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: "Recent Projects"
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      linkedin: https://www.linkedin.com/in/polina-ertel-bb89b875/
+
+  # List pages (for case studies listing)
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # Terms page
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
